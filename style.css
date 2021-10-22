@@ -173,11 +173,6 @@ body{
     left: 0;
     right: 0;
     display: flex;/*este es el contenedor padre*/
-    align-items: center;/*alinea a los hijos de forma vertical*/
+    align-items:baseline;/*alinea a los hijos de forma vertical*/
     justify-content: center;/*en este caso, de forma horizontal*/
-    visibility: hidden;
-}
-
-.adentro.ponele{
-    visibility: visible;
 }
