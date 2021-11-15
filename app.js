@@ -15,14 +15,26 @@ closepopup.addEventListener('click', function(){
 })
 
 var arrayGuardar = [];
-
-const registrar= function(){
+// Toma los datos de la susripción y quita el pop up si todos los datos son ingresados
+function registrar(){
   arrayGuardar[0] = document.getElementById('nameUsuario').value;
   arrayGuardar[1]= document.getElementById('mail').value;
-  arrayGuardar[2]= document.getElementById('contra').value;
-  registro.addEventListener('click',function(){
-    overley.classList.remove('active')});  
+  arrayGuardar[2]= document.getElementById('contra').value;  
+    if(arrayGuardar[0] == ''){
+      alert("Es necesario completar tu nombre");
+      return false;
+    }else if (arrayGuardar[1]== ''){
+      alert("Es necesario completar tu email");
+      return false;
+    } else if (arrayGuardar[2]== ''){
+      alert("Es necesario completar tu contraseña");
+      return false;
+    }
+    else{
+      overley.classList.remove('active');
+    }
 }
+
 
 console.log(arrayGuardar)
 
@@ -30,7 +42,7 @@ var iniciar=document.getElementById('iniciar');
 var adentro=document.getElementById('adentro');
 var ingreso = [];
 
-const go= function(){
+function go(){
   ingreso[0]= document.getElementById('pri').value;
   ingreso[1]= document.getElementById('segu').value;
   iniciar.addEventListener('click',function(){
