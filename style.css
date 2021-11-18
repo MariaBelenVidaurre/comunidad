@@ -59,7 +59,7 @@ body{
     border-radius: 6px;
 }
 
-.iniciar input{
+.iniciar button{
     padding: 0 20px;
     width: auto;
     height: 40px;
